@@ -1,0 +1,9 @@
+CREATE TABLE jobs (
+    id BIGSERIAL PRIMARY KEY,
+    type VARCHAR(100) NOT NULL,
+    status VARCHAR(100) NOT NULL,
+    attempts INT NOT NULL DEFAULT 0,
+    payload JSONB NOT NULL,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMPTZ
+);
